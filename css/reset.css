@@ -1,0 +1,30 @@
+html, body {padding: 0; margin: 0; overflow-x: hidden; font-family: 'Noto Sans KR';}
+ul,ol {list-style: none; margin: 0; padding: 0;}
+a {text-decoration: none; color:inherit;}
+h1,h2,h3,h4,h5,h6 {margin: 0; padding: 0;}
+button {background-color: transparent; border: none; cursor: pointer;}
+p, span {margin: 0; padding: 0;}
+
+.inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.sound_only {
+    display: inline-block !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 1px !important;
+    height: 1px !important;
+    font-size: 0;
+    text-indent: -9999em;
+    line-height: 0;
+    border: 0 !important;
+    overflow: hidden !important;
+}
