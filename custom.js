@@ -9,73 +9,53 @@ $(document).ready(function() {
 
 
 // Hide Header scrollDown
-var didScroll;
-var lastScrollTop = 0;
-var delta = 5;
-var navbarHeight = $('header').outerHeight();
+// var didScroll;
+// var lastScrollTop = 0;
+// var delta = 5;
+// var navbarHeight = $('header').outerHeight();
 
-$(window).scroll(function(event){
-    didScroll = true;
-});
+// $(window).scroll(function(event){
+//     didScroll = true;
+// });
 
-setInterval(function() {
-    if (didScroll) {
-        hasScrolled();
-        didScroll = false;
-    }
-}, 250);
+// setInterval(function() {
+//     if (didScroll) {
+//         hasScrolled();
+//         didScroll = false;
+//     }
+// }, 250);
 
-function hasScrolled() {
-    var st = $(this).scrollTop();
+// function hasScrolled() {
+//     var st = $(this).scrollTop();
     
-    // 설정한 delta 값보다 더 스크롤되었는지를 확인한다.
-    if(Math.abs(lastScrollTop - st) <= delta)
-        return;
+//     // 설정한 delta 값보다 더 스크롤되었는지를 확인한다.
+//     if(Math.abs(lastScrollTop - st) <= delta)
+//         return;
     
-    // 헤더의 높이보다 더 스크롤되었는지 확인하고 스크롤의 방향이 위인지 아래인지를 확인한다.
-    if (st > lastScrollTop && st > navbarHeight){
-        // Scroll Down
-        $('header').removeClass('nav-down').addClass('nav-up');
-    } else {
-        // Scroll Up
-        if(st + $(window).height() < $(document).height()) {
-            $('header').removeClass('nav-up').addClass('nav-down');
-        }
-    }
-    lastScrollTop = st;
-}
+//     // 헤더의 높이보다 더 스크롤되었는지 확인하고 스크롤의 방향이 위인지 아래인지를 확인한다.
+//     if (st > lastScrollTop && st > navbarHeight){
+//         // Scroll Down
+//         $('header').removeClass('nav-down').addClass('nav-up');
+//     } else {
+//         // Scroll Up
+//         if(st + $(window).height() < $(document).height()) {
+//             $('header').removeClass('nav-up').addClass('nav-down');
+//         }
+//     }
+    
+//     lastScrollTop = st;
+// }
 
 // 카드뉴스 슬라이드 
 $(document).ready(function() {
-    $('.cardnews-wrap').slick({
-        dots: false,
-        autoplay: false,
-        autoplaySpeed: 2500,
-        rows: 1,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        adaptiveHeight: true,
-        variableWidth: true,
-        centerPadding: '10px',
-        setPosition: 0,
-        cssEase: 'ease-out',
-        responsive: [
-            {
-              breakpoint: 1000,
-              settings: {
-                centerMode: true,
-                slidesToShow: 2
-              }
-            },
-            {
-              breakpoint: 480,
-              settings: {
-                centerMode: true,
-                slidesToShow: 1
-              }
-            }
-        ]
-    });
+  var swiper = new Swiper(".cardnews-wrap", {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
 });
 
 // 홈페이지 슬라이더
@@ -123,20 +103,22 @@ $(document).ready(function() {
 
 //상세페이지 클릭 시 팝업
 $(document).ready(function() {
-  var sliderPopup = new Swiper(".slider-popup", {
-    direction: "vertical",
-    slidesPerView: "auto",
-    freeMode: true,
-    scrollbar: {
-      el: ".swiper-scrollbar",
+  var swiper = new Swiper(".slider-popup", {
+    grabCursor: true,
+    effect: "creative",
+    creativeEffect: {
+      prev: {
+        shadow: true,
+        translate: [0, 0, -400],
+      },
+      next: {
+        translate: ["100%", 0, 0],
+      },
     },
-    mousewheel: true,
   });
 });
 
 //popup script
-slider.controller.control = sliderPopup;
-sliderPopup.controller.control = slider;
 $(document).ready(function () {
   // 사진보기 팝업 열기
   $(".swiper2 img").click(function () {
@@ -148,5 +130,6 @@ $(document).ready(function () {
     $(".popup-wrap").css("visibility", "hidden");
   });
 });
+
 
 
