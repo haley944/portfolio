@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/responsive.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
     <!-- slick -->
     <link rel="stylesheet" type="text/css" href="./plugin/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="./plugin/slick/slick-theme.css"/>
@@ -53,6 +53,18 @@
                     <span></span>
                 </button>
             </div>
+
+            <div id="category">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#web">Web</a></li>
+                    <li><a href="#design">Design</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+
+                <button type="button" class="pop_close"><span class="sound_only">닫기 버튼</span></button>
+            </div>
         </div>
     </header>
 
@@ -90,15 +102,15 @@
                                 <p>그누보드</p>
                             </div>
                             <div class="app slide-in-fwd-top">
-                                <div class="app_4"><img src="./images/mobile_ico_1.png" alt="카드뉴스"></div>
+                                <div class="app_4"><img src="../images/mobile_ico_1.png" alt="카드뉴스"></div>
                                 <p>카드뉴스</p>
                             </div>
                             <div class="app slide-in-fwd-top">
-                                <div class="app_5"><img src="./images/mobile_ico_2.png" alt="상세페이지"></div>
+                                <div class="app_5"><img src="../images/mobile_ico_2.png" alt="상세페이지"></div>
                                 <p>상세페이지</p>
                             </div>
                             <div class="app slide-in-fwd-top">
-                                <div class="app_6"><img src="./images/mobile_ico_3.png" alt="대구가톨릭대학교 로고"></div>
+                                <div class="app_6"><img src="../images/mobile_ico_3.png" alt="대구가톨릭대학교 로고"></div>
                                 <p>호텔경영학</p>
                             </div>
                         </div>
@@ -166,15 +178,26 @@
             <div class="inner">
                 <h4 class="main_txt">card news &amp; detail page</h4>
 
-                <div class="cardnews-wrap slide-box">
-                    <div class="slide" onclick="window.open('https://blog.naver.com/cbarihyang/222162951537?trackingCode=blog_bloghome_searchlist')">
-                        <img src="./images/card_1.jpg" alt="집콕대전 카드뉴스">
-                    </div>
-                    <div class="slide" onclick="window.open('https://www.instagram.com/p/CIPPeEajZwN/?igsh=OW90czVidjZ1M2Rh')">
-                        <img src="./images/card_2.jpg" alt="디지털 마케팅의 중요성 카드뉴스">
-                    </div>
-                    <div class="slide" onclick="window.open('https://minipage.kr/')">
-                        <img src="./images/card_3.jpg" alt="미니페이지 이벤트 카드뉴스">
+                <div class="cardnews-wrap swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide" onclick="window.open('https://blog.naver.com/cbarihyang/222162951537?trackingCode=blog_bloghome_searchlist')">
+                            <img src="./images/card_1.jpg" alt="집콕대전 카드뉴스">
+                        </div>
+                        <div class="swiper-slide" onclick="window.open('https://www.instagram.com/p/CIPPeEajZwN/?igsh=OW90czVidjZ1M2Rh')">
+                            <img src="./images/card_2.jpg" alt="디지털 마케팅의 중요성 카드뉴스">
+                        </div>
+                        <div class="swiper-slide" onclick="window.open('https://minipage.kr/')">
+                            <img src="./images/card_3.jpg" alt="미니페이지 이벤트 카드뉴스">
+                        </div>
+                        <div class="swiper-slide" onclick="window.open('https://blog.naver.com/cbarihyang/222162951537?trackingCode=blog_bloghome_searchlist')">
+                            <img src="./images/card_1.jpg" alt="집콕대전 카드뉴스">
+                        </div>
+                        <div class="swiper-slide" onclick="window.open('https://www.instagram.com/p/CIPPeEajZwN/?igsh=OW90czVidjZ1M2Rh')">
+                            <img src="./images/card_2.jpg" alt="디지털 마케팅의 중요성 카드뉴스">
+                        </div>
+                        <div class="swiper-slide" onclick="window.open('https://minipage.kr/')">
+                            <img src="./images/card_3.jpg" alt="미니페이지 이벤트 카드뉴스">
+                        </div>
                     </div>
                 </div>
 
@@ -187,22 +210,30 @@
                             <img src="./images/detail_img_2.png" alt="베이커리 상세페이지">
                         </div>
                         <div class="swiper-slide">
-                            <img src="./images/detail_img_3.png" alt="하늘제지 홈페이지">
+                            <img src="./images/detail_img_3.png" alt="이불 상세페이지">
                         </div>
                     </div>
                 </div>
 
                 <div class="popup-wrap">
                     <div class="overlay">
+                        <div class="side_alert">
+                            <p>옆으로 넘겨보세요.</p>
+                        </div>
                         <div class="swiper slider-popup">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
-                                    <img src="../images/detail_all_1.jpg" alt="문화센터 비누 만들기 상세페이지">
+                                    <img src="./images/detail_all_1.jpg" alt="문화센터 비누 만들기 상세페이지">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./images/detail_all_2.jpg" alt="베이커리 상세페이지">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./images/detail_all_3.jpg" alt="이불 상세페이지">
                                 </div>
                             </div>
                         </div>
-
-                        <button type="button" class="close_btn">X</button>
+                        <button type="button" class="close_btn"><span class="sound_only">닫기 버튼</span></button>
                     </div>
                 </div>
             </div>
@@ -217,7 +248,7 @@
                         <p>IT 특성상 진입장벽이 낮아 새롭게 유입되는 인력이 <br>많은 만큼 다시 빠져나가는 인력도 많습니다.</p>
                         <p>그 중에는 새롭게 배워야 하는 스킬이 늘어남에 따라 <br>포기하는 사람들도 있을 거라 생각합니다.</p>
                         <p>저는 조금은 느릴 수 있지만 포기하지 않고 나아가 <br>퍼블리싱과 디자인 두 가지를 병행하여 대체될 수 없는 <br>인력으로 성장해나가고자 합니다.</p>
-                        <a href="../download_file/resume.pdf" download="이력서_이승미">이력서 보기</a>
+                        <a href="./download_file/resume.pdf" download="이력서_이승미">이력서 보기</a>
                     </div>
                     <div class="txt_box">
                         <div class="title_box box_1">
@@ -269,10 +300,22 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
     <script src="./custom.js"></script>
-    <!-- slick -->
-    <script src="./plugin/slick/slick.min.js"></script>
     <!-- swiper -->
     <script src="./plugin/swiper/swiper-bundle.min.js"></script>
-    
+
+    <script>
+        //카테고리
+        function category () {
+            $("#menu_open").on("click", function() {
+                $("#category").toggleClass('active');
+                $(this).toggleClass('active');
+            });
+
+            $("#category .pop_close").on("click", function(){
+                $("#category").removeClass('active');
+            });
+        }
+        category();
+    </script>
 </body>
 </html>
