@@ -41,6 +41,9 @@
     header #menu_open button {width: 22px; height: 16px;}
     header #menu_open button span {height: 2px;}
 }
+@media screen and (max-width:500px) {
+    header #category {width: 100%;}
+}
 
 /* home */
 @media screen and (max-width:1760px) {
