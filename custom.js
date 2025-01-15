@@ -48,7 +48,7 @@ $(document).ready(function() {
 
 // 카드뉴스 슬라이드 
 $(document).ready(function() {
-  var swiper = new Swiper(".cardnews-wrap", {
+  var swiper1 = new Swiper(".cardnews-wrap", {
     slidesPerView: 3,
     spaceBetween: 30,
     pagination: {
@@ -75,7 +75,7 @@ $(document).ready(function() {
 
 // 홈페이지 슬라이더
 $(document).ready(function() {
-  var swiper = new Swiper(".swiper1", {
+  var swiper2 = new Swiper(".swiper1", {
     effect: "coverflow",
     centeredSlides: true,
     slidesPerView: "auto",
@@ -108,7 +108,7 @@ $(document).ready(function() {
 
 //상세페이지 슬라이더
 $(document).ready(function() {
-  var slider = new Swiper(".swiper2", {
+  var slider3 = new Swiper(".swiper2", {
     scrollbar: {
       el: ".swiper-scrollbar",
       hide: true,
