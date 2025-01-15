@@ -60,10 +60,9 @@ $(document).ready(function() {
         slidesPerView: 1,
         spaceBetween: 0,
       },
-      768: {
+      640: {
         slidesPerView: 2,  //브라우저가 768보다 클 때
         spaceBetween: 20,
-        slidesPerView: 'auto',
       },
       1024: {
         slidesPerView: 3,  //브라우저가 1024보다 클 때
