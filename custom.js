@@ -63,7 +63,7 @@ $(document).ready(function() {
       768: {
         slidesPerView: 2,  //브라우저가 768보다 클 때
         spaceBetween: 20,
-	slidesPerView: 'auto',
+        slidesPerView: 'auto',
       },
       1024: {
         slidesPerView: 3,  //브라우저가 1024보다 클 때
@@ -96,19 +96,17 @@ $(document).ready(function() {
     pagination: {
       el: ".swiper-pagination",
     },
-    // breakpoints: {
-    // 	900: {
-    //     slidesPerView:5,
-    //     centeredSlides:false,
-    //     spaceBetween:20,
-    //   },
-    // },
+    breakpoints: {
+    	900: {
+        slidesPerView:1,
+      },
+    },
   });
 });
 
 //상세페이지 슬라이더
 $(document).ready(function() {
-  var slider3 = new Swiper(".swiper2", {
+  var swiper3 = new Swiper(".swiper2", {
     scrollbar: {
       el: ".swiper-scrollbar",
       hide: true,
@@ -118,7 +116,7 @@ $(document).ready(function() {
 
 //상세페이지 클릭 시 팝업
 $(document).ready(function() {
-  var swiper = new Swiper(".slider-popup", {
+  var swiper4 = new Swiper(".slider-popup", {
     grabCursor: true,
     effect: "creative",
     creativeEffect: {
