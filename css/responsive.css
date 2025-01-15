@@ -86,10 +86,11 @@
 
 /* web */
 @media screen and (max-width: 1200px) {
-    .swiper-slide img {height: 300px;}
+    #web .swiper1 .swiper-slide img {height: 300px;}
 }
 @media screen and (max-width: 500px) {
-    .swiper-slide img {height: 250px;}
+    #web .swiper1 .swiper-slide img {height: 200px;}
+    #web .swiper1 .swiper-slide img {height: 250px;}
 }
 
 /* design */
