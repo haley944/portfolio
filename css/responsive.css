@@ -85,11 +85,10 @@
 }
 
 /* web */
-@media screen and (max-width: 1200px) {
-    #web .swiper1 .swiper-slide img {height: 300px;}
+@media screen and (max-width: 800px) {
+    #web .swiper1 .swiper-slide img {height: 350px;}
 }
 @media screen and (max-width: 500px) {
-    #web .swiper1 .swiper-slide img {height: 200px;}
     #web .swiper1 .swiper-slide img {height: 250px;}
 }
 
