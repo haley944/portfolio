@@ -102,10 +102,30 @@ header #category {
     animation: category .5s;
 }
 header #category.active {display: block;}
-header #category ul {padding:100px 50px 0;}
-header #category ul li {}
-header #category ul li:not(:last-child) {padding-bottom: 2rem;}
-header #category ul li a {}
+header #category h3 {
+    text-transform: uppercase;
+    font-size: 30px;
+    font-family: 'Poppins';
+    font-weight: 700;
+    text-align: center;
+    margin-top: 2rem;
+}
+header #category ul.cate_nav {padding:100px 50px 0; font-family: 'Montserrat';}
+header #category ul.cate_nav li {}
+header #category ul.cate_nav li:not(:last-child) {padding-bottom: 2rem;}
+header #category ul.cate_nav li a {}
+header #category ul.bottom_nav {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    border-top: 1px solid #dcdcdc;
+    height: 100px;
+}
+header #category ul.bottom_nav li {width: calc(100% / 4); text-align: center;}
+header #category ul.bottom_nav li span {display: block; color: #545454; font-size: 15px; margin-top: .2rem;}
 
 header #category button.pop_close {
     position: absolute;
