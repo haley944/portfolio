@@ -95,11 +95,6 @@ $(document).ready(function() {
     pagination: {
       el: ".swiper-pagination",
     },
-    breakpoints: {
-    	900: {
-        slidesPerView:1,
-      },
-    },
   });
 });
 
