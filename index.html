@@ -329,17 +329,30 @@
 
     <script>
         //카테고리
-        function category () {
-            $("#menu_open").on("click", function() {
-                $("#category").toggleClass('active');
-                $(this).toggleClass('active');
-            });
+        function category() {
+            
+        // 메뉴 열기/닫기 토글
+        $("#menu_open").on("click", function() {
+            $("#category").toggleClass('active');
+            $(this).toggleClass('active');
+        });
 
-            $("#category .pop_close").on("click", function(){
+        // 닫기 버튼 또는 링크 클릭 시 메뉴 닫기
+        $("#category .pop_close, #category a").on("click", function() {
+            $("#category").removeClass('active');
+        });
+
+        // 메뉴 외부 클릭 시 메뉴 닫기
+        $(document).on("click", function(event) {
+            if (!$(event.target).closest("#category, #menu_open").length) {
                 $("#category").removeClass('active');
-            });
-        }
-        category();
+                $("#menu_open").removeClass('active');
+            }
+        });
+    }
+
+    // 함수 호출
+    category();
     </script>
 </body>
 </html>
