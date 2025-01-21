@@ -335,6 +335,7 @@ main.container section {width: 100%; overflow: hidden;}
     display: block;
     width: 100%;    
     cursor: pointer;
+    object-fit: cover;
 }
 
 /* 홈페이지 상단바 */
