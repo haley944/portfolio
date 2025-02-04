@@ -77,7 +77,7 @@ $(document).ready(function() {
   var swiper2 = new Swiper(".swiper1", {
     effect: "coverflow",
     centeredSlides: true,
-    slidesPerView: "auto",
+    slidesPerView: "2",
     loop : true,
     loopAdditionalSlides : 1,
     autoplay:{
