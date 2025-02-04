@@ -330,6 +330,7 @@ main.container section {width: 100%; overflow: hidden;}
     flex-shrink: 0; /* 슬라이드 축소 방지 */
     background-position: center;
     background-size: cover;
+	transform: translateZ(0);
 }
 .swiper-slide img {
     display: block;
