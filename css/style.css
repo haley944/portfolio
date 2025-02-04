@@ -331,12 +331,14 @@ main.container section {width: 100%; overflow: hidden;}
     background-position: center;
     background-size: cover;
 	transform: translateZ(0);
+	min-width: 0;
 }
 .swiper-slide img {
     display: block;
     width: 100%;    
     cursor: pointer;
     object-fit: cover;
+	height: auto !important;
 }
 
 /* 홈페이지 상단바 */
