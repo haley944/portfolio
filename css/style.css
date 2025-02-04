@@ -326,7 +326,7 @@ main.container section {width: 100%; overflow: hidden;}
 }
 
 .swiper-slide {
-    width: 100%;
+    width: auto;
     flex-shrink: 0; /* 슬라이드 축소 방지 */
     background-position: center;
     background-size: cover;
