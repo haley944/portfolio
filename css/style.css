@@ -326,12 +326,12 @@ main.container section {width: 100%; overflow: hidden;}
 }
 
 .swiper-slide {
-    width: auto;
+    width: auto; /* 슬라이드 너비를 자동 조정 */
     flex-shrink: 0; /* 슬라이드 축소 방지 */
     background-position: center;
     background-size: cover;
-	transform: translateZ(0);
-	min-width: 0;
+    transform: translateZ(0);
+    min-width: 0;
 }
 .swiper-slide img {
     display: block;
