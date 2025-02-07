@@ -339,6 +339,10 @@ main.container section {width: 100%; overflow: hidden;}
     cursor: pointer;
     object-fit: cover;
 }
+.swiper1 .swiper-slide {
+    width: fit-content;
+    min-width: 300px;
+}
 
 /* 홈페이지 상단바 */
 .top_bar {
