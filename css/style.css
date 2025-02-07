@@ -341,7 +341,6 @@ main.container section {width: 100%; overflow: hidden;}
 }
 .swiper1 .swiper-slide {
     width: fit-content;
-    min-width: 300px;
 }
 
 /* 홈페이지 상단바 */
