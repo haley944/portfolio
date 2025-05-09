@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/sub.css">
+    <!-- slick -->
+    <link rel="stylesheet" type="text/css" href="../plugin/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="../plugin/slick/slick-theme.css"/>
+    <!-- swiper -->
+    <link rel="stylesheet" type="text/css" href="../plugin/swiper/swiper-bundle.min.css"/>
+    
+    <title>portfolio</title>
+</head>
+<body>
+    <!-- 헤더 -->
+    <header>
+        <div class="inner">
+            <!-- 로고 -->
+            <h1 id="logo">
+                <a href="../index.html">
+                    <h3>portfolio</h3>
+                </a>
+            </h1>
+
+            <!-- 메뉴 -->
+            <nav>
+                <ul id="gnb">
+                    <li>
+                        <a href="index.html#home">Home</a>
+                    </li>
+                    <li>
+                        <a href="index.html#web">Web</a>
+                    </li>
+                    <li>
+                        <a href="index.html#design">Design</a>
+                    </li>
+                    <li>
+                        <a href="index.html#about">About</a>
+                    </li>
+                    <li>
+                        <a href="index.html#contact">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div id="menu_open">
+                <button type="button">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+
+            <div id="category">
+                <h3>portfolio</h3>
+                <ul class="cate_nav">
+                    <li>
+                        <a href="index.html#web">Web</a>
+                    </li>
+                    <li>
+                        <a href="index.html#design">Design</a>
+                    </li>
+                    <li>
+                        <a href="index.html#about">About</a>
+                    </li>
+                </ul>
+                <ul class="bottom_nav">
+                    <li>
+                        <a href="#" target="_blank">
+                            <img src="../images/bt_nav_ico1.png" alt="하단메뉴 오픈채팅">
+                            <span>오픈채팅</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:addid123@naver.com" target="_blank">
+                            <img src="../images/bt_nav_ico2.png" alt="하단메뉴 메일">
+                            <span>메일</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../download_file/resume.pdf" download="이력서_이승미">
+                            <img src="../images/bt_nav_ico3.png" alt="하단메뉴 이력서">
+                            <span>이력서</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../index.html">
+                            <img src="../images/bt_nav_ico4.png" alt="하단메뉴 홈으로">
+                            <span>홈으로</span>
+                        </a>
+                    </li>
+                </ul>
+                <button type="button" class="pop_close"><span class="sound_only">닫기 버튼</span></button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="sub_roll">
+            <div class="sub_wrap inner">
+                <div class="swiper subSlide">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="sub_img_wrap">
+                                <img src="../images/sub_slide_1.jpg" alt="제천하소생활문화센터'산책'">
+                            </div>
+            
+                            <div class="sub_txt_wrap">
+                                <div class="title_box">
+                                    <h4 id="title">제천하소생활문화센터 산책</h4>
+                                    <p>제천시 하소동에 위치했으며, 제천시민이라면 누구나 참여할 수 있는 여러가지 프로그램과 도서관, 연습실 등이 갖춰진 생활문화센터입니다. </p>
+                                </div>
+                                
+                                <div class="chart-wrapper" >
+                                    <div class="donut-chart">
+                                        <canvas id="chartPlan" data-value="50"><span class="sound_only">기획 참여도 도넛 그래프</span></canvas>
+                                        <span class="label">기획</span>
+                                    </div>
+                                    <div class="donut-chart">
+                                        <canvas id="chartDesign" data-value="50"><span class="sound_only">디자인 참여도 도넛 그래프</span></canvas>
+                                        <span class="label">디자인</span>
+                                    </div>
+                                    <div class="donut-chart">
+                                        <canvas id="chartPublish" data-value="30"><span class="sound_only">퍼블리싱 참여도 도넛 그래프</span></canvas>
+                                        <span class="label">퍼블리싱</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="link_box">
+                                    <span>url</span>
+                                    <a href="https://jccfresh.or.kr/#page-1" target="_blank">https://jccfresh.or.kr</a>
+                                </div>
+                                <div class="etc_box">
+                                    <p>메인 페이지를 제외한 서브 페이지 기획 및 디자인과 퍼블리싱에 참여하였으며, 제작 당시 웹접근성 작업을 하였습니다. 웹접근성을 전혀 모르는 상태에서 직접 관련 기관에 전화를 하고 찾아보며 작업했습니다. 현재는 웹접근성 업데이트를 하고 있지 않은 것으로 판단됩니다. </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="sub_img_wrap">
+                                <img src="../images/sub_slide_2.jpg" alt="수안보호텔스크린">
+                            </div>
+            
+                            <div class="sub_txt_wrap">
+                                <div class="title_box">
+                                    <h4 id="title">수안보호텔스크린</h4>
+                                    <p>충주시 수안보면에 위치한 호텔로서, 온천을 이용한 것이 특징입니다. 객실 안내 및 주의사항, 예약 현황 등을 보실 수 있으며 예약 또한 해당 사이트에서 가능합니다.</p>
+                                </div>
+                                
+                                <div class="chart-wrapper" >
+                                    <div class="donut-chart">
+                                        <canvas id="chartPlan" data-value="70"><span class="sound_only">기획 참여도 도넛 그래프</span></canvas>
+                                        <span class="label">기획</span>
+                                    </div>
+                                    <div class="donut-chart">
+                                        <canvas id="chartDesign" data-value="70"><span class="sound_only">디자인 참여도 도넛 그래프</span></canvas>
+                                        <span class="label">디자인</span>
+                                    </div>
+                                    <div class="donut-chart">
+                                        <canvas id="chartPublish" data-value="100"><span class="sound_only">퍼블리싱 참여도 도넛 그래프</span></canvas>
+                                        <span class="label">퍼블리싱</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="link_box">
+                                    <span>url</span>
+                                    <a href="http://www.hotelscreen.co.kr/" target="_blank">http://www.hotelscreen.co.kr/</a>
+                                </div>
+                                <div class="etc_box">
+                                    <p>메인 페이지를 제외한 모든 페이지의 기획 및 디자인에 참여하였으며, 전체적인 퍼블리싱을 담당하였습니다.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="sub_img_wrap">
+                                <img src="../images/sub_slide_3.jpg" alt="영월 브이광장">
+                            </div>
+            
+                            <div class="sub_txt_wrap">
+                                <div class="title_box">
+                                    <h4 id="title">영월 브이광장</h4>
+                                    <p>온라인 봉사 플랫폼으로서 영월군 관련 자원봉사 신청 및 예약을 받는 웹사이트입니다. </p>
+                                </div>
+                                
+                                <div class="chart-wrapper" >
+                                    <div class="donut-chart">
+                                        <canvas id="chartPlan" data-value="30"><span class="sound_only">기획 참여도 도넛 그래프</span></canvas>
+                                        <span class="label">기획</span>
+                                    </div>
+                                    <div class="donut-chart">
+                                        <canvas id="chartDesign" data-value="50"><span class="sound_only">디자인 참여도 도넛 그래프</span></canvas>
+                                        <span class="label">디자인</span>
+                                    </div>
+                                    <div class="donut-chart">
+                                        <canvas id="chartPublish" data-value="100"><span class="sound_only">퍼블리싱 참여도 도넛 그래프</span></canvas>
+                                        <span class="label">퍼블리싱</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="link_box">
+                                    <span>url</span>
+                                    <a href="https://ywvc.or.kr/volunteer/" target="_blank">https://ywvc.or.kr/volunteer/</a>
+                                </div>
+                                <div class="etc_box">
+                                    <p>개발은 참여하지 않았으나, 메인 페이지를 제외한 모든 페이지의 기획 및 디자인에 참여하였으며 전체적인 퍼블리싱을 담당하였습니다. </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="sub_img_wrap">
+                                <img src="../images/sub_slide_4.jpg" alt="온석 힐링하우스">
+                            </div>
+            
+                            <div class="sub_txt_wrap">
+                                <div class="title_box">
+                                    <h4 id="title">온석 힐링하우스</h4>
+                                    <p>충청북도 남부 서산에 위치한 독채 펜션 하우스로서, 숙소 뿐만 아니라 찜질방 및 썬룸도 함께 즐길 수 있습니다. 예약 및 안내사항을 확인할 수 있습니다.</p>
+                                </div>
+                                
+                                <div class="chart-wrapper" >
+                                    <div class="donut-chart">
+                                        <canvas id="chartPlan" data-value="100"><span class="sound_only">기획 참여도 도넛 그래프</span></canvas>
+                                        <span class="label">기획</span>
+                                    </div>
+                                    <div class="donut-chart">
+                                        <canvas id="chartDesign" data-value="100"><span class="sound_only">디자인 참여도 도넛 그래프</span></canvas>
+                                        <span class="label">디자인</span>
+                                    </div>
+                                    <div class="donut-chart">
+                                        <canvas id="chartPublish" data-value="100"><span class="sound_only">퍼블리싱 참여도 도넛 그래프</span></canvas>
+                                        <span class="label">퍼블리싱</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="link_box">
+                                    <span>url</span>
+                                    <a href="http://www.xn--9y2bp8kt7a1ygrtap71etrd.com/" target="_blank">http://www.온석힐링하우스.com/</a>
+                                </div>
+                                <div class="etc_box">
+                                    <p>전체적인 디자인과 기획, 퍼블리싱을 모두 담당한 웹페이지입니다.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="sub_img_wrap">
+                                <img src="../images/sub_slide_5.jpg" alt="하늘제지">
+                            </div>
+            
+                            <div class="sub_txt_wrap">
+                                <div class="title_box">
+                                    <h4 id="title">하늘제지</h4>
+                                    <p>회사에서 주로 사용하는 사무용품을 판매하는 쇼핑몰입니다. 종이 관련 제품을 주력으로 생산시스템을 갖추고 친환경제품을 비롯해 다양한 라인업의 제품을 생산하고 있습니다.</p>
+                                </div>
+                                
+                                <div class="chart-wrapper" >
+                                    <div class="donut-chart">
+                                        <canvas id="chartPlan" data-value="70"><span class="sound_only">기획 참여도 도넛 그래프</span></canvas>
+                                        <span class="label">기획</span>
+                                    </div>
+                                    <div class="donut-chart">
+                                        <canvas id="chartDesign" data-value="70"><span class="sound_only">디자인 참여도 도넛 그래프</span></canvas>
+                                        <span class="label">디자인</span>
+                                    </div>
+                                    <div class="donut-chart">
+                                        <canvas id="chartPublish" data-value="100"><span class="sound_only">퍼블리싱 참여도 도넛 그래프</span></canvas>
+                                        <span class="label">퍼블리싱</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="link_box">
+                                    <span>url</span>
+                                    <a href="http://haneoulpaper.co.kr/" target="_blank">http://haneoulpaper.co.kr/</a>
+                                </div>
+                                <div class="etc_box">
+                                    <p>메인 페이지를 제외한 모든 페이지의 기획 및 디자인에 참여하였으며, 전체적인 퍼블리싱을 담당하였습니다.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="sub_img_wrap">
+                                <img src="../images/sub_slide_6.jpg" alt="세일시스템">
+                            </div>
+            
+                            <div class="sub_txt_wrap">
+                                <div class="title_box">
+                                    <h4 id="title">세일시스템</h4>
+                                    <p>영상감시시스템 생산 업체로서, 관련 제품 판매 및 관련 기술을 개발하는 회사입니다.</p>
+                                </div>
+                                
+                                <div class="chart-wrapper" >
+                                    <div class="donut-chart">
+                                        <canvas id="chartPlan" data-value="70"><span class="sound_only">기획 참여도 도넛 그래프</span></canvas>
+                                        <span class="label">기획</span>
+                                    </div>
+                                    <div class="donut-chart">
+                                        <canvas id="chartDesign" data-value="70"><span class="sound_only">디자인 참여도 도넛 그래프</span></canvas>
+                                        <span class="label">디자인</span>
+                                    </div>
+                                    <div class="donut-chart">
+                                        <canvas id="chartPublish" data-value="100"><span class="sound_only">퍼블리싱 참여도 도넛 그래프</span></canvas>
+                                        <span class="label">퍼블리싱</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="link_box">
+                                    <span>url</span>
+                                    <a href="http://www.seilsystem.kr/#page-1" target="_blank">http://www.seilsystem.kr/#page-1</a>
+                                </div>
+                                <div class="etc_box">
+                                    <p>풀페이지로 구현했으며 메인 페이지를 제외한 모든 페이지의 기획 및 디자인에 참여하고고, 전체적인 퍼블리싱을 담당하였습니다.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="sub_img_wrap">
+                                <img src="../images/sub_slide_7.jpg" alt="영월군자원봉사센터">
+                            </div>
+            
+                            <div class="sub_txt_wrap">
+                                <div class="title_box">
+                                    <h4 id="title">영월군자원봉사센터</h4>
+                                    <p>강원도 영월군에 위치한 영월군 자원봉사센터입니다. 영월군 내의 자원봉사 관련 안내 및 일정을 확인할 수 있으며, 관련 활동들도 확인할 수 있습니다.</p>
+                                </div>
+                                
+                                <div class="chart-wrapper" >
+                                    <div class="donut-chart">
+                                        <canvas id="chartPlan" data-value="60"><span class="sound_only">기획 참여도 도넛 그래프</span></canvas>
+                                        <span class="label">기획</span>
+                                    </div>
+                                    <div class="donut-chart">
+                                        <canvas id="chartDesign" data-value="70"><span class="sound_only">디자인 참여도 도넛 그래프</span></canvas>
+                                        <span class="label">디자인</span>
+                                    </div>
+                                    <div class="donut-chart">
+                                        <canvas id="chartPublish" data-value="100"><span class="sound_only">퍼블리싱 참여도 도넛 그래프</span></canvas>
+                                        <span class="label">퍼블리싱</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="link_box">
+                                    <span>url</span>
+                                    <a href="https://ywvc.or.kr/" target="_blank">https://ywvc.or.kr/</a>
+                                </div>
+                                <div class="etc_box">
+                                    <p>메인 페이지를 제외한 모든 페이지의 기획 및 디자인에 참여하였으며, 전체적인 퍼블리싱을 담당하였습니다.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="sub_img_wrap">
+                                <img src="../images/sub_slide_8.jpg" alt="여수씨엘뷰티학원">
+                            </div>
+            
+                            <div class="sub_txt_wrap">
+                                <div class="title_box">
+                                    <h4 id="title">여수씨엘뷰티학원</h4>
+                                    <p>전라남도 여수에 위치한 뷰티 아카데미로서, 뷰티 관련 자격증 정보 및 교육 과정과 커뮤니티 등을 운영하고 있습니다.</p>
+                                </div>
+                                
+                                <div class="chart-wrapper" >
+                                    <div class="donut-chart">
+                                        <canvas id="chartPlan" data-value="50"><span class="sound_only">기획 참여도 도넛 그래프</span></canvas>
+                                        <span class="label">기획</span>
+                                    </div>
+                                    <div class="donut-chart">
+                                        <canvas id="chartDesign" data-value="60"><span class="sound_only">디자인 참여도 도넛 그래프</span></canvas>
+                                        <span class="label">디자인</span>
+                                    </div>
+                                    <div class="donut-chart">
+                                        <canvas id="chartPublish" data-value="100"><span class="sound_only">퍼블리싱 참여도 도넛 그래프</span></canvas>
+                                        <span class="label">퍼블리싱</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="link_box">
+                                    <span>url</span>
+                                    <a href="http://ysclbeauty.kr/" target="_blank">http://ysclbeauty.kr/</a>
+                                </div>
+                                <div class="etc_box">
+                                    <p>메인 페이지를 제외한 모든 페이지의 기획 및 디자인에 참여하였으며, 전체적인 퍼블리싱을 담당하였습니다.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="sub_img_wrap">
+                                <img src="../images/sub_slide_9.jpg" alt="청도프로방스 글램핑">
+                            </div>
+            
+                            <div class="sub_txt_wrap">
+                                <div class="title_box">
+                                    <h4 id="title">청도프로방스 글램핑</h4>
+                                    <p>경상북도 청도에 위치한 글램핑입니다. 예약 신청 및 확인을 할 수 있으며 관련 안내사항도 모두 기재되어 있습니다.</p>
+                                </div>
+                                
+                                <div class="chart-wrapper" >
+                                    <div class="donut-chart">
+                                        <canvas id="chartPlan" data-value="80"><span class="sound_only">기획 참여도 도넛 그래프</span></canvas>
+                                        <span class="label">기획</span>
+                                    </div>
+                                    <div class="donut-chart">
+                                        <canvas id="chartDesign" data-value="70"><span class="sound_only">디자인 참여도 도넛 그래프</span></canvas>
+                                        <span class="label">디자인</span>
+                                    </div>
+                                    <div class="donut-chart">
+                                        <canvas id="chartPublish" data-value="100"><span class="sound_only">퍼블리싱 참여도 도넛 그래프</span></canvas>
+                                        <span class="label">퍼블리싱</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="link_box">
+                                    <span>url</span>
+                                    <a href="https://provenceglamping.com/" target="_blank">https://provenceglamping.com/</a>
+                                </div>
+                                <div class="etc_box">
+                                    <p>메인 페이지를 제외한 모든 페이지의 기획 및 디자인에 참여하였으며, 전체적인 퍼블리싱을 담당하였습니다.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="button--wrapper">
+                        <div class="custom-button-prev">
+                            <svg class="chevron-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div class="custom-button-next">
+                            <svg class="chevron-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9 6L15 12L9 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+    <script src="../plugin/swiper/swiper-bundle.min.js"></script>
+    <!-- 차트 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
+    <script src="./custom.js"></script>
+    <script>
+    // 퍼센트를 받아 도넛 차트 생성 함수
+    const chartInstances = {};
+
+    function createDonutChart(canvas) {
+    const percent = parseInt(canvas.dataset.value, 10) || 0;
+
+    const chart = new Chart(canvas.getContext('2d'), {
+        type: 'doughnut',
+        data: {
+            datasets: [{
+            data: [percent, 100 - percent],
+            backgroundColor: ['#1E73E8', '#e6e6e6'],
+            borderWidth: 0
+            }]
+        },
+        options: {
+            responsive: false,
+            cutout: '70%',
+            plugins: {
+                tooltip: { enabled: false },
+                legend: { display: false }
+            }
+        },
+        plugins: [{
+            id: 'textInCenter',
+            beforeDraw(chart) {
+                const { ctx, chartArea: { width, height } } = chart;
+                ctx.save();
+                ctx.fillStyle = '#5a5a5a';
+                ctx.font = '400 .8rem sans-serif';
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'middle';
+                ctx.fillText(`${percent}%`, width / 2, height / 2);
+                ctx.restore();
+            }
+        }]
+    });
+    chartInstances[canvas] = chart;
+    }
+
+    function initChartsInSlide(slide) {
+    const canvases = slide.querySelectorAll('canvas');
+
+    canvases.forEach(canvas => {
+        if (!chartInstances[canvas.id]) {
+            createDonutChart(canvas);
+            }
+        });
+    }
+
+    // swiper 슬라이드
+    var swiper = new Swiper(".subSlide", {
+        pagination: {
+        el: ".swiper-pagination",
+        type: "fraction",
+        },
+        navigation: {
+        nextEl: ".custom-button-next",
+        prevEl: ".custom-button-prev",
+        },
+        on: {
+            init: function () {
+                initChartsInSlide(this.slides[this.activeIndex]);
+            },
+            slideChangeTransitionEnd: function () {
+                initChartsInSlide(this.slides[this.activeIndex]);
+            }
+        }
+    });
+    </script>
+</body>
+</html>
