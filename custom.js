@@ -1,10 +1,27 @@
-// a태그 부드럽게 스크롤링
-$(document).ready(function() {
-    $('ul#gnb > li > a').click(function(e) {
-        e.preventDefault(); //a 태그 버벅거림 제거
-        $('html,body').animate({scrollTop:$(this.hash).offset().top -53}, 500);
-        //부드럽게 스크롤 이동하는부분 - 53부분은 고정 header이기때문에 추가됨, 고정 header가 아닌 경우 삭제
-    })
+$(document).ready(function () {
+  // 1. 메뉴 클릭 시 현재 페이지에서 부드러운 이동
+  $('ul#gnb > li > a').click(function (e) {
+    const target = $(this.hash);
+    if (target.length) {
+      e.preventDefault();
+      $('html,body').animate({
+        scrollTop: target.offset().top - 53
+      }, 500);
+    }
+  });
+
+  // 2. 다른 페이지에서 넘어왔을 때 처리
+  const hash = window.location.hash;
+  if (hash) {
+    const target = $(hash);
+    if (target.length) {
+      setTimeout(() => {
+        $('html,body').animate({
+          scrollTop: target.offset().top - 53
+        }, 500);
+      }, 100); // 딜레이 중요!
+    }
+  }
 });
 
 
@@ -46,6 +63,39 @@ $(document).ready(function() {
 //     lastScrollTop = st;
 // }
 
+// 스크롤 이벤트 리스너
+function animateOnScroll() {
+  const mobileWrap = document.querySelector('.home_wrap'); // 대상 영역
+  const animatedItems = document.querySelectorAll('.slide-in-fwd-top'); // 애니메이션 요소들
+  const mobileWrapTop = mobileWrap.getBoundingClientRect().top; // 요소의 현재 위치
+  // const triggerPoint = window.innerHeight * 0.8; // 화면의 80% 지점에서 실행
+
+  const isOutOfView = mobileWrapRect.bottom < 0 || mobileWrapRect.top > window.innerHeight;
+
+  if (mobileWrapTop < triggerPoint) {
+      animatedItems.forEach(item => {
+          item.classList.remove('slide-in-fwd-top'); // 기존 애니메이션 제거
+          void item.offsetWidth; // **트릭: 브라우저가 변화를 감지하도록 강제**
+          item.classList.add('slide-in-fwd-top'); // 다시 애니메이션 실행
+      });
+  }
+
+  if (window.scrollY === 0) {
+    animatedItems.forEach(item => {
+        item.classList.remove('slide-in-fwd-top'); // 기존 클래스 제거 (초기화)
+        void item.offsetWidth; // **트릭: 리플로우 강제하여 브라우저가 변화를 감지**
+        item.classList.add('slide-in-fwd-top'); // 다시 애니메이션 실행
+    });
+  }
+}
+// 스크롤 이벤트 등록
+window.addEventListener('scroll', animateOnScroll);
+
+// 페이지 로드 시 실행
+window.addEventListener('load', animateOnScroll);
+
+
+
 // 카드뉴스 슬라이드 
 $(document).ready(function() {
   var swiper1 = new Swiper(".cardnews-wrap", {
@@ -80,11 +130,10 @@ $(document).ready(function() {
     slidesPerView: "auto",
     loop : true,
     loopAdditionalSlides : 1,
-    autoplay:{
-		  delay: 2500, // 시간 설정
-      disableOnInteraction: false, // false-스와이프 후 자동 재생
-      loop: true,
-	  },
+    // autoplay:{
+		//   delay: 2500, // 시간 설정
+    //   disableOnInteraction: false, // false-스와이프 후 자동 재생
+	  // },
     coverflowEffect: {
       rotate: 0, // 슬라이더 회전 각 : 클수록 슬라이딩 시 회전이 커짐
       stretch: 100, // 슬라이더간 거리(픽셀) : 클수록 슬라이더가 서로 많이 겹침
@@ -95,6 +144,11 @@ $(document).ready(function() {
     pagination: {
       el: ".swiper-pagination",
     },
+    // breakpoints: {
+    //   500: {
+        
+    //   },
+    // },
   });
 });
 
@@ -139,4 +193,30 @@ $(document).ready(function () {
 });
 
 
+//카테고리
+$(document).ready(function(){
+  function category() {
+  
+  // 메뉴 열기/닫기 토글
+  $("#menu_open").on("click", function() {
+      $("#category").toggleClass('active');
+      $(this).toggleClass('active');
+  });
 
+  // 닫기 버튼 또는 링크 클릭 시 메뉴 닫기
+  $("#category .pop_close, #category a").on("click", function() {
+      $("#category").removeClass('active');
+  });
+
+  // 메뉴 외부 클릭 시 메뉴 닫기
+  $(document).on("click", function(event) {
+      if (!$(event.target).closest("#category, #menu_open").length) {
+          $("#category").removeClass('active');
+          $("#menu_open").removeClass('active');
+      }
+  });
+}
+
+// 함수 호출
+category();
+})
