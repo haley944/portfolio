@@ -323,36 +323,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+    <script src="../plugin/swiper/swiper-bundle.min.js"></script>
     <script src="./custom.js"></script>
-    <!-- swiper -->
-    <script src="./plugin/swiper/swiper-bundle.min.js"></script>
-
-    <script>
-        //카테고리
-        function category() {
-            
-        // 메뉴 열기/닫기 토글
-        $("#menu_open").on("click", function() {
-            $("#category").toggleClass('active');
-            $(this).toggleClass('active');
-        });
-
-        // 닫기 버튼 또는 링크 클릭 시 메뉴 닫기
-        $("#category .pop_close, #category a").on("click", function() {
-            $("#category").removeClass('active');
-        });
-
-        // 메뉴 외부 클릭 시 메뉴 닫기
-        $(document).on("click", function(event) {
-            if (!$(event.target).closest("#category, #menu_open").length) {
-                $("#category").removeClass('active');
-                $("#menu_open").removeClass('active');
-            }
-        });
-    }
-
-    // 함수 호출
-    category();
-    </script>
 </body>
 </html>
