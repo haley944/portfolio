@@ -1,0 +1,159 @@
+@font-face {
+    src: url('../fonts/GmarketSansTTFBold.ttf');
+    font-family: 'GmarketSansBold';
+}
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;800;900&display=swap');
+
+
+main.container {}
+/* swiper */
+.swiper .button--wrapper {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: translateX(-50%);
+    width: 65px;
+    height: 35px;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.swiper .button--wrapper > div {
+    cursor: pointer;
+    background: #ffffff;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #dcdcdc;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.swiper-pagination {
+    transform: translate(50px, 0) !important;
+    font-family: 'Poppins';
+    font-size: 18px;
+}
+
+section#sub_roll {margin: 60px 0;}
+section#sub_roll .swiper-slide {
+    display: flex;
+}
+section#sub_roll .swiper-slide > div {width: calc((100% - 20px) / 2);}
+.sub_wrap .sub_img_wrap {margin-right: 20px;}
+.sub_wrap .sub_txt_wrap {}
+.sub_wrap .sub_txt_wrap > div:not(:last-child) {margin-bottom: 3rem;}
+.sub_wrap .sub_txt_wrap .title_box {letter-spacing: -.2px;}
+.sub_wrap .sub_txt_wrap .title_box h4 {
+    font-family: 'GmarketSansBold';
+    font-size: 35px;
+    color: #333333;
+    margin-bottom: .5rem;
+}
+.sub_wrap .sub_txt_wrap .title_box p {
+    color: #5a5a5a;
+    font-size: 17px;
+    word-break: keep-all;
+    font-family: "Noto Sans KR", sans-serif;
+    font-weight: 400;
+}
+
+.sub_wrap .sub_txt_wrap .chart-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.sub_wrap .sub_txt_wrap .chart-wrapper canvas {
+    width: 150px !important;
+    height: 150px !important;
+}
+.sub_wrap .sub_txt_wrap .chart-wrapper > div {
+    width: calc(100% / 3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.sub_wrap .sub_txt_wrap .chart-wrapper > div span.label {
+    display: block;
+    font-size: 16px;
+    font-weight: 400;
+    color: #333333 !important;
+    margin-top: .5rem;
+}
+
+.sub_wrap .sub_txt_wrap .link_box {
+    font-family: 'Poppins';
+    font-size: 16px;
+}
+.sub_wrap .sub_txt_wrap .link_box span {
+    display: inline-block;
+    width: 80px;
+    height: 30px;
+    line-height: 30px;
+    background-color: #ffb73d;
+    color: #ffffff;
+    text-align: center;
+    border-radius: 15px;
+    text-transform: uppercase;
+}
+.sub_wrap .sub_txt_wrap .link_box a {
+    display: inline-block;
+    color: #333333;
+    margin-left: 1rem;
+}
+.sub_wrap .sub_txt_wrap .etc_box {
+    width: 100%;
+    height: 150px;
+    background-color: #f7f7f7;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+}
+.sub_wrap .sub_txt_wrap .etc_box p {
+    word-break: keep-all;
+    font-size: 17px;
+    line-height: 150%;
+    color: #333333;
+    width: 90%;
+    display: block;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 1300px) {
+    section#sub_roll .swiper-slide {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    section#sub_roll .swiper-slide > div {width: 100%;}
+    .sub_wrap .sub_img_wrap {margin-right: 0;}
+    .sub_wrap .sub_txt_wrap {margin-top: 5rem;}
+    .swiper-pagination-fraction {display: none;}
+    .swiper .button--wrapper {
+        right: auto;
+        left: 0;
+        bottom: auto;
+        top: 30%;
+        transform: translateY(-50%);
+        width: 100%;
+    }
+    .swiper .button--wrapper > div {width: 50px; height: 50px;}
+    .custom-button-prev, .custom-button-next {position: absolute; } 
+    .custom-button-prev {left: 0;}
+    .custom-button-next {right: 0;}
+}
+
+@media screen and (max-width: 960px) {
+    .sub_wrap .sub_txt_wrap .title_box h4 {font-size: 30px;}
+    .sub_wrap .sub_txt_wrap .title_box p {font-size: 16px;}
+    .sub_wrap .sub_txt_wrap .etc_box p {font-size: 16px;}
+}
+
+@media screen and (max-width: 500px) {
+    .sub_wrap .sub_txt_wrap .title_box h4 {font-size: 26px;}
+    .sub_wrap .sub_txt_wrap .title_box p {font-size: 15px;}
+    .sub_wrap .sub_txt_wrap .etc_box p {font-size: 15px;}
+    .sub_wrap .sub_txt_wrap .chart-wrapper canvas {width: 100px !important; height: 100px !important;}
+}
