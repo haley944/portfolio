@@ -220,3 +220,26 @@ $(document).ready(function(){
 // 함수 호출
 category();
 })
+
+// 스크롤 영역 진입 시 메뉴 버튼 css 변경
+window.onload = function() {
+  const menuItems = document.querySelectorAll('#gnb a');
+  const sections = document.querySelectorAll('main section');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      const id = entry.target.getAttribute('id');
+      const targetLink = document.querySelector(`#gnb a[data-target="${id}"]`);
+
+      if (entry.isIntersecting) {
+        menuItems.forEach(item => item.classList.remove('active'));
+        if (targetLink) targetLink.classList.add('active');
+      }
+    });
+  }, {
+    root: null,
+    threshold: 0.5
+  });
+
+  sections.forEach(section => observer.observe(section));
+};
