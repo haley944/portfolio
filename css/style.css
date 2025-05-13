@@ -73,6 +73,20 @@ header ul#gnb li a::after {
 }
 header ul#gnb li:hover a {color: #3076d6;}
 header ul#gnb li:hover a::after {width: calc(100% + 20px); transition: width .4s;}
+header ul#gnb li a.active {color: #3076d6;}
+header ul#gnb li a.active::after {
+    display: block;
+    clear: both;
+    content: '';
+    height: 3px;
+    width: 0;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #3076d6;
+}
+header ul#gnb li a.active::after {width: calc(100% + 20px); transition: width .4s;}
 header #menu_open {display: none;}
 header #menu_open button {display: block; position: relative; width:26px; height:19px; margin-right: 1rem;}
 header #menu_open button span {
