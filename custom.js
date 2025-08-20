@@ -24,6 +24,18 @@ $(document).ready(function () {
   }
 });
 
+//header 크기에 따라 padding 값 주기
+document.addEventListener('DOMContentLoaded', setMainPadding);
+window.addEventListener('resize', setMainPadding);
+
+function setMainPadding() {
+    const header = document.querySelector('header');
+    const mainContent = document.querySelector('.container');
+    if (header && mainContent) {
+        const headerHeight = header.offsetHeight;
+        mainContent.style.paddingTop = `${headerHeight}px`;
+    }
+}
 
 // Hide Header scrollDown
 // var didScroll;
@@ -248,4 +260,5 @@ window.onload = function() {
 
   sections.forEach(section => observer.observe(section));
 };
+
 
