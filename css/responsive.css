@@ -69,7 +69,6 @@
     #home .home_img .s_sec p {font-size: 15px;}
 }
 @media screen and (max-width: 860px) {
-    #home {padding-top: 70px;}
     #home .home_img .mobile_wrap {display: block;}
     #home .home_img .b_sec {width:100%; margin-bottom: 1rem;}
     #home .home_img .s_sec {width: 100%; margin-left: auto; justify-content: space-between;}
@@ -148,3 +147,4 @@
     section#contact .c_wrapper {display: block;}
     section#contact .c_wrapper > div.email_box {margin-bottom: .5rem;}
 }
+
