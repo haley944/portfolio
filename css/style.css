@@ -182,7 +182,7 @@ header #category button.pop_close::after {
 /* main */
 main.container {}
 main.container section {width: 100%; overflow: hidden;}
-#home {height: 600px; background-color: #27374d; padding-top: 100px;}
+#home {height: 600px; background-color: #27374d;}
 #home .inner {}
 #home .home_wrap {
     display: flex;
@@ -788,3 +788,4 @@ section#contact p {
     }
   }
   
+
