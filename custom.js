@@ -65,26 +65,31 @@ $(document).ready(function () {
 
 // 스크롤 이벤트 리스너
 function animateOnScroll() {
-  const mobileWrap = document.querySelector('.home_wrap'); // 대상 영역
-  const animatedItems = document.querySelectorAll('.slide-in-fwd-top'); // 애니메이션 요소들
-  const mobileWrapTop = mobileWrap.getBoundingClientRect().top; // 요소의 현재 위치
-  // const triggerPoint = window.innerHeight * 0.8; // 화면의 80% 지점에서 실행
+  const mobileWrap = document.querySelector('.home_wrap');
+  const animatedItems = document.querySelectorAll('.slide-in-fwd-top');
+
+  // mobileWrapRect 변수 선언
+  const mobileWrapRect = mobileWrap.getBoundingClientRect();
+
+  // triggerPoint 변수 선언 (주석 해제)
+  const triggerPoint = window.innerHeight * 0.8;
 
   const isOutOfView = mobileWrapRect.bottom < 0 || mobileWrapRect.top > window.innerHeight;
 
-  if (mobileWrapTop < triggerPoint) {
-      animatedItems.forEach(item => {
-          item.classList.remove('slide-in-fwd-top'); // 기존 애니메이션 제거
-          void item.offsetWidth; // **트릭: 브라우저가 변화를 감지하도록 강제**
-          item.classList.add('slide-in-fwd-top'); // 다시 애니메이션 실행
-      });
+  // 수정된 조건식: mobileWrapRect.top을 기준으로 비교
+  if (mobileWrapRect.top < triggerPoint) {
+    animatedItems.forEach(item => {
+      item.classList.remove('slide-in-fwd-top');
+      void item.offsetWidth;
+      item.classList.add('slide-in-fwd-top');
+    });
   }
 
   if (window.scrollY === 0) {
     animatedItems.forEach(item => {
-        item.classList.remove('slide-in-fwd-top'); // 기존 클래스 제거 (초기화)
-        void item.offsetWidth; // **트릭: 리플로우 강제하여 브라우저가 변화를 감지**
-        item.classList.add('slide-in-fwd-top'); // 다시 애니메이션 실행
+      item.classList.remove('slide-in-fwd-top');
+      void item.offsetWidth;
+      item.classList.add('slide-in-fwd-top');
     });
   }
 }
@@ -243,3 +248,4 @@ window.onload = function() {
 
   sections.forEach(section => observer.observe(section));
 };
+
