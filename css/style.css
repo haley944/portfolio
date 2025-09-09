@@ -787,5 +787,22 @@ section#contact p {
         transform: scale(1);
     }
   }
-  
+
+
+/* 사파리 오류 잡기 위해 임시로 넣음 */
+.swiper1 {
+  -webkit-perspective: 1200px;
+  perspective: 1200px;
+}
+
+.swiper1 .swiper-wrapper {
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.swiper1 .swiper-slide {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
 
