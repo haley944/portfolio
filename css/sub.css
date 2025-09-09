@@ -55,7 +55,7 @@ section#sub_roll .swiper-slide > div {width: calc((100% - 20px) / 2);}
     color: #5a5a5a;
     font-size: 17px;
     word-break: keep-all;
-    font-family: "Noto Sans KR", sans-serif;
+    font-family: "Noto Sans KR";
     font-weight: 400;
 }
 
@@ -156,4 +156,5 @@ section#sub_roll .swiper-slide > div {width: calc((100% - 20px) / 2);}
     .sub_wrap .sub_txt_wrap .etc_box p {font-size: 15px;}
     .sub_wrap .sub_txt_wrap .chart-wrapper canvas {width: 100px !important; height: 100px !important;}
 }
+
 
