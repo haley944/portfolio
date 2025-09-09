@@ -156,7 +156,7 @@ $(document).ready(function() {
       stretch: 100, // 슬라이더간 거리(픽셀) : 클수록 슬라이더가 서로 많이 겹침
       depth: 200, // 깊이 효과값 : 클수록 멀리있는 느낌이 강해짐
       modifier: 1, // 효과 배수 : 위 숫자값들에 이 값을 곱하기 처리하여 효과를 강하게 처리함
-      slideShadows: true,
+      slideShadows: false,
     },
     pagination: {
       el: ".swiper-pagination",
@@ -260,5 +260,6 @@ window.onload = function() {
 
   sections.forEach(section => observer.observe(section));
 };
+
 
 
