@@ -145,7 +145,7 @@ $(document).ready(function() {
     effect: "coverflow",
     centeredSlides: true,
     slidesPerView: "auto",
-    loop : false,
+    loop : true,
     loopAdditionalSlides : 1,
     // autoplay:{
 		//   delay: 2500, // 시간 설정
@@ -260,6 +260,7 @@ window.onload = function() {
 
   sections.forEach(section => observer.observe(section));
 };
+
 
 
 
