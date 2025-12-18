@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:url" content="https://haley944.github.io/portfolio/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="이승미의 포트폴리오" />
+    <meta property="og:description" content="웹디자인과 웹퍼블리싱을 함께 하는 이승미의 포트폴리오입니다." />
+    <meta property="og:image" content="../images/og_img.png" />
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+    <link rel="stylesheet" href="./css/sub.css">
+    <!-- swiper -->
+    <link rel="stylesheet" type="text/css" href="../plugin/swiper/swiper-bundle.min.css"/>
+    
+    <title>portfolio</title>
+</head>
+<body>
+    <header>
+        <div class="inner">
+            <!-- 로고 -->
+            <h1 id="logo">
+                <a href="../index.html">
+                    <h3>portfolio</h3>
+                </a>
+            </h1>
+
+            <!-- 메뉴 -->
+            <nav>
+                <ul id="gnb">
+                    <li>
+                        <a href="index.html#home">Home</a>
+                    </li>
+                    <li>
+                        <a href="index.html#web">Web</a>
+                    </li>
+                    <li>
+                        <a href="index.html#design">Design</a>
+                    </li>
+                    <li>
+                        <a href="index.html#about">About</a>
+                    </li>
+                    <li>
+                        <a href="index.html#contact">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div id="menu_open">
+                <button type="button">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+
+            <div id="category">
+                <h3>portfolio</h3>
+                <ul class="cate_nav">
+                    <li>
+                        <a href="index.html#web">Web</a>
+                    </li>
+                    <li>
+                        <a href="index.html#design">Design</a>
+                    </li>
+                    <li>
+                        <a href="index.html#about">About</a>
+                    </li>
+                </ul>
+                <ul class="bottom_nav">
+                    <li>
+                        <a href="#" target="_blank">
+                            <img src="../images/bt_nav_ico1.png" alt="하단메뉴 오픈채팅">
+                            <span>오픈채팅</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:addid123@naver.com" target="_blank">
+                            <img src="../images/bt_nav_ico2.png" alt="하단메뉴 메일">
+                            <span>메일</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../download_file/resume.pdf" download="이력서_이승미">
+                            <img src="../images/bt_nav_ico3.png" alt="하단메뉴 이력서">
+                            <span>이력서</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../index.html">
+                            <img src="../images/bt_nav_ico4.png" alt="하단메뉴 홈으로">
+                            <span>홈으로</span>
+                        </a>
+                    </li>
+                </ul>
+                <button type="button" class="pop_close"><span class="sound_only">닫기 버튼</span></button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="swiper detailSwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide detail-slide">
+                    <div class="img-sec"><img src="../images/detail_all_1.jpg" alt="문화센터 비누 만들기 상세페이지"></div>
+                    <div class="txt-sec"></div>
+                </div>
+                <div class="swiper-slide detail-slide">Slide 2</div>
+                <div class="swiper-slide detail-slide">Slide 3</div>
+                <div class="swiper-slide detail-slide">Slide 4</div>
+                <div class="swiper-slide detail-slide">Slide 5</div>
+                <div class="swiper-slide detail-slide">Slide 6</div>
+                <div class="swiper-slide detail-slide">Slide 7</div>
+                <div class="swiper-slide detail-slide">Slide 8</div>
+                <div class="swiper-slide detail-slide">Slide 9</div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </main>
+
+    <footer></footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+    <script src="../plugin/swiper/swiper-bundle.min.js"></script>
+    <script src="./custom.js"></script>
+    <script>
+        // swiper 슬라이드
+        var swiper = new Swiper(".detailSwiper", {
+            direction: "vertical",
+            pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+            },
+            freeMode: true,
+            mousewheel: true,
+            slidesPerView: 'auto',
+        });
+    </script>
+</body>
+</html>
