@@ -25,16 +25,19 @@ $(document).ready(function () {
 });
 
 //header 크기에 따라 padding 값 주기
-document.addEventListener('DOMContentLoaded', setMainPadding);
-window.addEventListener('resize', setMainPadding);
+document.addEventListener('DOMContentLoaded', setLayoutByHeader);
+window.addEventListener('resize', setLayoutByHeader);
 
-function setMainPadding() {
-    const header = document.querySelector('header');
-    const mainContent = document.querySelector('.container');
-    if (header && mainContent) {
-        const headerHeight = header.offsetHeight;
-        mainContent.style.paddingTop = `${headerHeight}px`;
-    }
+function setLayoutByHeader() {
+  const header = document.querySelector('header');
+  const mainContent = document.querySelector('.container');
+  const root = document.documentElement;
+
+  if (!header || !mainContent) return;
+
+  const headerHeight = header.offsetHeight;
+  mainContent.style.paddingTop = `${headerHeight}px`; //padding-top 값
+  root.style.setProperty('--header-h', `${headerHeight}px`); //css 변수로 header 높이 전달, subPage02에서 sldier 때문에 필요
 }
 
 // Hide Header scrollDown
@@ -147,10 +150,10 @@ $(document).ready(function() {
     slidesPerView: "auto",
     loop : true,
     loopAdditionalSlides : 1,
-    // autoplay:{
-		//   delay: 2500, // 시간 설정
-    //   disableOnInteraction: false, // false-스와이프 후 자동 재생
-	  // },
+    autoplay:{
+		  delay: 2500, // 시간 설정
+      disableOnInteraction: false, // false-스와이프 후 자동 재생
+	  },
     coverflowEffect: {
       rotate: 0, // 슬라이더 회전 각 : 클수록 슬라이딩 시 회전이 커짐
       stretch: 100, // 슬라이더간 거리(픽셀) : 클수록 슬라이더가 서로 많이 겹침
@@ -197,17 +200,17 @@ $(document).ready(function() {
 });
 
 //popup script
-$(document).ready(function () {
-  // 사진보기 팝업 열기
-  $(".swiper2 img").click(function () {
-    $(".popup-wrap").css("visibility", "visible");
-  });
+// $(document).ready(function () {
+//   // 사진보기 팝업 열기
+//   $(".swiper2 img").click(function () {
+//     $(".popup-wrap").css("visibility", "visible");
+//   });
 
-  // 사진보기 팝업 닫기
-  $(".close_btn").click(function () {
-    $(".popup-wrap").css("visibility", "hidden");
-  });
-});
+//   // 사진보기 팝업 닫기
+//   $(".close_btn").click(function () {
+//     $(".popup-wrap").css("visibility", "hidden");
+//   });
+// });
 
 
 //카테고리
@@ -260,9 +263,3 @@ window.onload = function() {
 
   sections.forEach(section => observer.observe(section));
 };
-
-
-
-
-
-
