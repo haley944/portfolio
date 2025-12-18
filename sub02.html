@@ -100,23 +100,31 @@
         </div>
     </header>
 
-    <main>
-        <div class="swiper detailSwiper">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide detail-slide">
-                    <div class="img-sec"><img src="../images/detail_all_1.jpg" alt="문화센터 비누 만들기 상세페이지"></div>
-                    <div class="txt-sec"></div>
+    <main class="container">
+        <div class="inner">
+            <div class="swiper detailSwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide detail-slide">
+                        <div class="img-sec"><img src="../images/detail_all_1.jpg" alt="문화센터 비누 만들기 상세페이지"></div>
+                        <div class="txt-sec">
+                            <p>본 상세페이지는 실제 기업 프로젝트가 아닌, 포트폴리오 제작을 목적으로 기획·디자인한 개인 작업물입니다.</p>                   
+                        </div>
+                    </div>
+                    <div class="swiper-slide detail-slide">
+                        <div class="img-sec"><img src="../images/detail_all_2.jpg" alt="베이커리 상세페이지"></div>
+                        <div class="txt-sec"></div>
+                    </div>
+                    <div class="swiper-slide detail-slide">
+                        <div class="img-sec"><img src="../images/detail_all_3.jpg" alt="이불 상세페이지"></div>
+                        <div class="txt-sec"></div>
+                    </div>
+                    <div class="swiper-slide detail-slide">
+                        <div class="img-sec"><img src="../images/detail_all_4.jpg" alt="보드카 상세페이지"></div>
+                        <div class="txt-sec"></div>
+                    </div>
                 </div>
-                <div class="swiper-slide detail-slide">Slide 2</div>
-                <div class="swiper-slide detail-slide">Slide 3</div>
-                <div class="swiper-slide detail-slide">Slide 4</div>
-                <div class="swiper-slide detail-slide">Slide 5</div>
-                <div class="swiper-slide detail-slide">Slide 6</div>
-                <div class="swiper-slide detail-slide">Slide 7</div>
-                <div class="swiper-slide detail-slide">Slide 8</div>
-                <div class="swiper-slide detail-slide">Slide 9</div>
+                <div class="swiper-pagination"></div>
             </div>
-            <div class="swiper-pagination"></div>
         </div>
     </main>
 
@@ -128,15 +136,36 @@
     <script src="./custom.js"></script>
     <script>
         // swiper 슬라이드
-        var swiper = new Swiper(".detailSwiper", {
-            direction: "vertical",
-            pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
+        const swiper = new Swiper('.detailSwiper', {
+            direction: 'vertical',
+            slidesPerView: 1,
+            mousewheel: {
+                forceToAxis: true,
+                sensitivity: 1,
+                releaseOnEdges: true,
             },
-            freeMode: true,
-            mousewheel: true,
-            slidesPerView: 'auto',
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'progressbar',
+            },
+        });
+
+        //내부 스크롤 중에는 스크롤 막기
+        document.querySelectorAll('.img-sec').forEach((el) => {
+            el.addEventListener('wheel', (e) => {
+                const isAtTop = el.scrollTop === 0;
+                const isAtBottom =
+                el.scrollTop + el.clientHeight >= el.scrollHeight;
+
+                if (
+                (isAtTop && e.deltaY < 0) ||
+                (isAtBottom && e.deltaY > 0)
+                ) {
+                return;
+                }
+
+                e.stopPropagation();
+            });
         });
     </script>
 </body>
