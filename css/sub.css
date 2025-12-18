@@ -2,6 +2,10 @@
     src: url('../fonts/GmarketSansTTFBold.ttf');
     font-family: 'GmarketSansBold';
 }
+@font-face {
+    src: url('../fonts/GmarketSansTTFMedium.ttf');
+    font-family: 'GmarketSansMedium';
+}
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;800;900&display=swap');
 
@@ -121,6 +125,19 @@ section#sub_roll .swiper-slide > div {width: calc((100% - 20px) / 2);}
     margin: 0 auto;
 }
 
+/* 상세페이지 */
+main .detailSwiper {}
+.detailSwiper .detail-slide {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.detailSwiper .detail-slide > div {width: calc((100% - 20px) / 2); height: 800px;}
+.detailSwiper .detail-slide .img-sec {margin-right: 20px; overflow-y: scroll;}
+
+
+
 @media screen and (max-width: 1300px) {
     section#sub_roll .swiper-slide {
         flex-wrap: wrap;
@@ -151,10 +168,15 @@ section#sub_roll .swiper-slide > div {width: calc((100% - 20px) / 2);}
 }
 
 @media screen and (max-width: 500px) {
+    .sub_wrap .sub_txt_wrap {margin-top: 2.5rem;}
     .sub_wrap .sub_txt_wrap .title_box h4 {font-size: 26px;}
     .sub_wrap .sub_txt_wrap .title_box p {font-size: 15px;}
     .sub_wrap .sub_txt_wrap .etc_box p {font-size: 15px;}
     .sub_wrap .sub_txt_wrap .chart-wrapper canvas {width: 100px !important; height: 100px !important;}
 }
 
-
+@media screen and (max-width: 450px) {
+    .sub_wrap .sub_txt_wrap .title_box h4 {font-size: 24px;}
+    .sub_wrap .sub_txt_wrap .title_box p {font-size: 14px;}
+    .sub_wrap .sub_txt_wrap .etc_box p {font-size: 14px;}
+}
