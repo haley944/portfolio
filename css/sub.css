@@ -126,8 +126,7 @@ section#sub_roll .swiper-slide > div {width: calc((100% - 20px) / 2);}
 }
 
 /* 상세페이지 */
-main.container.sub2,
-main.container.sub2 > .inner {
+main.container.sub2, main.container.sub2 > .inner {
   height: calc(100vh - var(--header-h));
   display: flex;
   justify-content: center;
@@ -140,8 +139,7 @@ main.container.sub2 > .inner {
   position: relative; 
   overflow: hidden; 
 }
-.detailSwiper .swiper-wrapper,
-.detailSwiper .swiper-slide {height: 100%;}
+.detailSwiper .swiper-wrapper, .detailSwiper .swiper-slide {height: 100%;}
 .detailSwiper .detail-slide {display: flex;}
 .detailSwiper .detail-slide > div {width: calc((100% - 20px) / 2); height: 100%;}
 .detailSwiper .detail-slide .img-sec {margin-right: 20px; overflow-y: auto;}
@@ -163,6 +161,7 @@ main.container.sub2 > .inner {
     font-weight: 300;
     word-break: keep-all;
 }
+.detail-slide .txt-sec > p:not(:first-child) {margin-top: .5rem;}
 .detail-slide .color_box {margin: 3rem 0;}
 .detail-slide .color_box > span {
     color:#333333; 
@@ -197,6 +196,7 @@ main.container.sub2 > .inner {
 
 /* 반응형 */
 @media screen and (max-width: 1300px) {
+    /* sub01 */
     section#sub_roll .swiper-slide {
         flex-wrap: wrap;
         flex-direction: column;
@@ -217,6 +217,28 @@ main.container.sub2 > .inner {
     .custom-button-prev, .custom-button-next {position: absolute; } 
     .custom-button-prev {left: 0;}
     .custom-button-next {right: 0;}
+
+    /* sub02 */
+    main.container.sub2, main.container.sub2 > .inner {height: auto; }
+    .detailSwiper {max-width: 100%; height: 100vh;}
+    .detailSwiper .detail-slide {flex-direction: column;}
+    .detailSwiper.swiper .button--wrapper {top:70%}
+    .detailSwiper .detail-slide > div {width: 100%; height: auto;}
+    .detailSwiper .detail-slide .txt-sec {order: 1;}
+    .detailSwiper .detail-slide .img-sec {
+        margin-right: 0;
+        margin-top: 3rem;
+        order: 2;
+        max-width: 860px;
+    }
+    .detail-slide .etc_box {
+        position: static;
+        width: auto;
+        height: auto;
+        line-height: normal;
+        padding: 15px;
+        margin-top: 3rem;
+    }
 }
 
 @media screen and (max-width: 960px) {
@@ -231,6 +253,11 @@ main.container.sub2 > .inner {
     .sub_wrap .sub_txt_wrap .title_box p {font-size: 15px;}
     .sub_wrap .sub_txt_wrap .etc_box p {font-size: 15px;}
     .sub_wrap .sub_txt_wrap .chart-wrapper canvas {width: 100px !important; height: 100px !important;}
+
+    /* sub02 */
+    .detail-slide .txt-sec h3 {font-size: 20px;}
+    .detail-slide .txt-sec {font-size: 15px;}
+    .detail-slide .etc_box p {font-size: 14px;}
 }
 
 @media screen and (max-width: 450px) {
