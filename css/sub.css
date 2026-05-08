@@ -226,7 +226,7 @@ main.container.sub2, main.container.sub2 > .inner {
     .detailSwiper .detail-slide > div {width: 100%; height: auto;}
     .detailSwiper .detail-slide .txt-sec {order: 1;}
     .detailSwiper .detail-slide .img-sec {
-        margin-right: 0;
+        margin-right: auto;
         margin-top: 3rem;
         order: 2;
         max-width: 860px;
@@ -255,6 +255,10 @@ main.container.sub2, main.container.sub2 > .inner {
     .sub_wrap .sub_txt_wrap .chart-wrapper canvas {width: 100px !important; height: 100px !important;}
 
     /* sub02 */
+     .detailSwiper{
+        height: 1100px;
+    }
+    .detail-slide .img-sec {min-height: 60vh; }
     .detail-slide .txt-sec h3 {font-size: 20px;}
     .detail-slide .txt-sec {font-size: 15px;}
     .detail-slide .etc_box p {font-size: 14px;}
