@@ -209,24 +209,28 @@
         // swiper 슬라이드
         const swiper = new Swiper('.detailSwiper', {
             direction: 'vertical',
-            pagination: {
-            el: ".swiper-pagination",
-            type: "fraction",
-            },
             slidesPerView: 1,
-            observer: true,
-            observeParents: true,
-            resizeObserver: true,
+            nested: true,
+            touchRatio: 0.5,
+            threshold: 10,
+            pagination: {
+                el: ".swiper-pagination",
+                type: "fraction",
+            },
             navigation: {
                 nextEl: '.custom-button-next',
                 prevEl: '.custom-button-prev',
             },
+            mousewheel: {
+                releaseOnEdges: true,
+            },
+            touchReleaseOnEdges: true,
             on: {
                 slideChangeTransitionStart: function () {
-                // 모든 슬라이드의 img 영역 스크롤 초기화
-                document.querySelectorAll('.img-sec').forEach(el => {
-                    el.scrollTop = 0;
-                });
+
+                    document.querySelectorAll('.img-sec').forEach(el => {
+                        el.scrollTop = 0;
+                    });
                 }
             }
         });
