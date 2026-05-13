@@ -79,40 +79,42 @@ function setLayoutByHeader() {
 // }
 
 // 스크롤 이벤트 리스너
-function animateOnScroll() {
-  const mobileWrap = document.querySelector('.home_wrap');
-  const animatedItems = document.querySelectorAll('.slide-in-fwd-top');
+const homeSection = document.querySelector('#home');
+let topAnimationPlayed = false;
 
-  // mobileWrapRect 변수 선언
-  const mobileWrapRect = mobileWrap.getBoundingClientRect();
+/* 최초 진입 애니메이션 */
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      const animatedItems = entry.target.querySelectorAll('.slide-item');
+      animatedItems.forEach(item => {
+        item.classList.add('slide-in-fwd-top');
+      });
+    }
+  });
+}, {
+  threshold: 0.3
+});
+observer.observe(homeSection);
 
-  // triggerPoint 변수 선언 (주석 해제)
-  const triggerPoint = window.innerHeight * 0.8;
+/* 맨 위 도달 시 1회만 재실행 */
+window.addEventListener('scroll', () => {
 
-  const isOutOfView = mobileWrapRect.bottom < 0 || mobileWrapRect.top > window.innerHeight;
-
-  // 수정된 조건식: mobileWrapRect.top을 기준으로 비교
-  if (mobileWrapRect.top < triggerPoint) {
+  if(window.scrollY === 0 && !topAnimationPlayed){
+    const animatedItems = document.querySelectorAll('.slide-item');
     animatedItems.forEach(item => {
       item.classList.remove('slide-in-fwd-top');
       void item.offsetWidth;
       item.classList.add('slide-in-fwd-top');
     });
-  }
 
-  if (window.scrollY === 0) {
-    animatedItems.forEach(item => {
-      item.classList.remove('slide-in-fwd-top');
-      void item.offsetWidth;
-      item.classList.add('slide-in-fwd-top');
-    });
+    topAnimationPlayed = true;
   }
-}
-// 스크롤 이벤트 등록
-window.addEventListener('scroll', animateOnScroll);
-
-// 페이지 로드 시 실행
-window.addEventListener('load', animateOnScroll);
+  /* 아래로 내려가면 다시 실행 가능 상태로 변경 */
+  if(window.scrollY > 50){
+    topAnimationPlayed = false;
+  }
+});
 
 
 
