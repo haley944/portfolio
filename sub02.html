@@ -225,12 +225,18 @@
         },
         on: {
             slideChangeTransitionEnd: function () {
-                /* img-sec 내부 스크롤 초기화 */
                 document.querySelectorAll('.img-sec').forEach(el => {
+
                     el.scrollTop = 0;
+                    /* iOS overflow 강제 재계산 */
+                    el.style.overflow = 'hidden';
+                    requestAnimationFrame(() => {
+                        el.style.overflow = 'auto';
+                    });
                 });
-                /* detailSwiper 최상단으로 이동 */
+
                 const swiperTop = document.querySelector('.detailSwiper');
+
                 window.scrollTo({
                     top: swiperTop.offsetTop - 100,
                     behavior: 'smooth'
@@ -238,6 +244,7 @@
             }
         }
     });
+
 
     //내부 스크롤 중에는 스크롤 막기
     document.querySelectorAll('.img-sec').forEach((el) => {
