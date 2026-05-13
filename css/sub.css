@@ -142,7 +142,7 @@ main.container.sub2, main.container.sub2 > .inner {
 .detailSwiper .swiper-wrapper, .detailSwiper .swiper-slide {height: 100%;}
 .detailSwiper .detail-slide {display: flex;}
 .detailSwiper .detail-slide > div {width: calc((100% - 20px) / 2); height: 100%;}
-.detailSwiper .detail-slide .img-sec {margin-right: 20px; overflow-y: auto;}
+.detailSwiper .detail-slide .img-sec {margin-right: 20px; overflow-y: auto; touch-action: pan-y; overscroll-behavior: contain;}
 .detailSwiper .detail-slide .img-sec img {width: 100%; display: block;}
 .detail-slide .txt-sec {letter-spacing: -.2px; font-size: 17px; position: relative;}
 .detail-slide .txt-sec h3 {
