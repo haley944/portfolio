@@ -255,12 +255,13 @@ main.container.sub2, main.container.sub2 > .inner {
     .sub_wrap .sub_txt_wrap .chart-wrapper canvas {width: 100px !important; height: 100px !important;}
 
     /* sub02 */
-     .detailSwiper{
-        height: 1100px;
-    }
+    .detailSwiper{height: 1100px;}
+    .detail-slide .color_box {margin: 1.5rem 0;}
     .detail-slide .img-sec {min-height: 60vh; }
+    .detail-slide .txt-sec { border-top: 1px solid #dcdcdc; padding-top: 1rem;}
     .detail-slide .txt-sec h3 {font-size: 20px;}
     .detail-slide .txt-sec {font-size: 15px;}
+    .detail-slide .etc_box {margin-top: 1.5rem;}
     .detail-slide .etc_box p {font-size: 14px;}
 }
 
