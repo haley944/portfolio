@@ -208,56 +208,60 @@
     <script>
         // swiper 슬라이드
         const swiper = new Swiper('.detailSwiper', {
-            direction: 'vertical',
-            slidesPerView: 1,
-            nested: true,
-            touchRatio: 0.5,
-            threshold: 10,
-            pagination: {
-                el: ".swiper-pagination",
-                type: "fraction",
-            },
-            navigation: {
-                nextEl: '.custom-button-next',
-                prevEl: '.custom-button-prev',
-            },
-            mousewheel: {
-                releaseOnEdges: true,
-            },
-            touchReleaseOnEdges: true,
-            on: {
-                slideChangeTransitionStart: function () {
 
-                    document.querySelectorAll('.img-sec').forEach(el => {
-                        el.scrollTop = 0;
-                    });
-                }
+        direction: 'vertical',
+        slidesPerView: 1,
+        allowTouchMove: window.innerWidth > 1300,
+        mousewheel: window.innerWidth > 1300 ? {
+            releaseOnEdges: true,
+        } : false,
+        pagination: {
+            el: ".swiper-pagination",
+            type: "fraction",
+        },
+        navigation: {
+            nextEl: '.custom-button-next',
+            prevEl: '.custom-button-prev',
+        },
+        on: {
+            slideChangeTransitionEnd: function () {
+                /* img-sec 내부 스크롤 초기화 */
+                document.querySelectorAll('.img-sec').forEach(el => {
+                    el.scrollTop = 0;
+                });
+                /* detailSwiper 최상단으로 이동 */
+                const swiperTop = document.querySelector('.detailSwiper');
+                window.scrollTo({
+                    top: swiperTop.offsetTop - 100,
+                    behavior: 'smooth'
+                });
             }
+        }
+    });
+
+    //내부 스크롤 중에는 스크롤 막기
+    document.querySelectorAll('.img-sec').forEach((el) => {
+        el.addEventListener('wheel', (e) => {
+            const isAtTop = el.scrollTop === 0;
+            const isAtBottom =
+            el.scrollTop + el.clientHeight >= el.scrollHeight;
+
+            if (
+            (isAtTop && e.deltaY < 0) ||
+            (isAtBottom && e.deltaY > 0)
+            ) {
+            return;
+            }
+
+            e.stopPropagation();
         });
+    });
 
-        //내부 스크롤 중에는 스크롤 막기
-        document.querySelectorAll('.img-sec').forEach((el) => {
-            el.addEventListener('wheel', (e) => {
-                const isAtTop = el.scrollTop === 0;
-                const isAtBottom =
-                el.scrollTop + el.clientHeight >= el.scrollHeight;
-
-                if (
-                (isAtTop && e.deltaY < 0) ||
-                (isAtBottom && e.deltaY > 0)
-                ) {
-                return;
-                }
-
-                e.stopPropagation();
-            });
-        });
-
-        //color_box > span > ::before에 color 넣기
-        document.querySelectorAll('.color_box span').forEach(el => {
-            const color = el.textContent.trim(); // span에 적힌 컬러값 가져오기
-            el.style.setProperty('--color', color);
-        });
+    //color_box > span > ::before에 color 넣기
+    document.querySelectorAll('.color_box span').forEach(el => {
+        const color = el.textContent.trim(); // span에 적힌 컬러값 가져오기
+        el.style.setProperty('--color', color);
+    });
     </script>
 </body>
 </html>
