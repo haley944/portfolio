@@ -40,44 +40,6 @@ function setLayoutByHeader() {
   root.style.setProperty('--header-h', `${headerHeight}px`); //css 변수로 header 높이 전달, subPage02에서 sldier 때문에 필요
 }
 
-// Hide Header scrollDown
-// var didScroll;
-// var lastScrollTop = 0;
-// var delta = 5;
-// var navbarHeight = $('header').outerHeight();
-
-// $(window).scroll(function(event){
-//     didScroll = true;
-// });
-
-// setInterval(function() {
-//     if (didScroll) {
-//         hasScrolled();
-//         didScroll = false;
-//     }
-// }, 250);
-
-// function hasScrolled() {
-//     var st = $(this).scrollTop();
-    
-//     // 설정한 delta 값보다 더 스크롤되었는지를 확인한다.
-//     if(Math.abs(lastScrollTop - st) <= delta)
-//         return;
-    
-//     // 헤더의 높이보다 더 스크롤되었는지 확인하고 스크롤의 방향이 위인지 아래인지를 확인한다.
-//     if (st > lastScrollTop && st > navbarHeight){
-//         // Scroll Down
-//         $('header').removeClass('nav-down').addClass('nav-up');
-//     } else {
-//         // Scroll Up
-//         if(st + $(window).height() < $(document).height()) {
-//             $('header').removeClass('nav-up').addClass('nav-down');
-//         }
-//     }
-    
-//     lastScrollTop = st;
-// }
-
 // 스크롤 이벤트 리스너
 const homeSection = document.querySelector('#home');
 let topAnimationPlayed = false;
@@ -116,13 +78,12 @@ window.addEventListener('scroll', () => {
   }
 });
 
-
-
 // 카드뉴스 슬라이드 
 $(document).ready(function() {
   var swiper1 = new Swiper(".cardnews-wrap", {
     slidesPerView: 3,
     spaceBetween: 30,
+    loop: true,
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
@@ -166,11 +127,6 @@ $(document).ready(function() {
     pagination: {
       el: ".swiper-pagination",
     },
-    // breakpoints: {
-    //   500: {
-        
-    //   },
-    // },
   });
 });
 
@@ -181,38 +137,9 @@ $(document).ready(function() {
       el: ".swiper-scrollbar",
       hide: true,
     },
+    loop: true,
   });
 });
-
-//상세페이지 클릭 시 팝업
-$(document).ready(function() {
-  var swiper4 = new Swiper(".slider-popup", {
-    grabCursor: true,
-    effect: "creative",
-    creativeEffect: {
-      prev: {
-        shadow: true,
-        translate: [0, 0, -400],
-      },
-      next: {
-        translate: ["100%", 0, 0],
-      },
-    },
-  });
-});
-
-//popup script
-// $(document).ready(function () {
-//   // 사진보기 팝업 열기
-//   $(".swiper2 img").click(function () {
-//     $(".popup-wrap").css("visibility", "visible");
-//   });
-
-//   // 사진보기 팝업 닫기
-//   $(".close_btn").click(function () {
-//     $(".popup-wrap").css("visibility", "hidden");
-//   });
-// });
 
 
 //카테고리
