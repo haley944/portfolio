@@ -206,12 +206,13 @@
     <script src="./plugin/swiper/swiper-bundle.min.js"></script>
     <script src="./custom.js"></script>
     <script>
-        // swiper 슬라이드
-        const swiper = new Swiper('.detailSwiper', {
-
+    // swiper 슬라이드
+    const swiper = new Swiper('.detailSwiper', {
         direction: 'vertical',
+        loop: true,
         slidesPerView: 1,
         allowTouchMove: window.innerWidth > 1300,
+        simulateTouch: window.innerWidth > 1300,
         mousewheel: window.innerWidth > 1300 ? {
             releaseOnEdges: true,
         } : false,
@@ -226,25 +227,21 @@
         on: {
             slideChangeTransitionEnd: function () {
                 document.querySelectorAll('.img-sec').forEach(el => {
-
                     el.scrollTop = 0;
-                    /* iOS overflow 강제 재계산 */
                     el.style.overflow = 'hidden';
+
                     requestAnimationFrame(() => {
                         el.style.overflow = 'auto';
                     });
                 });
 
                 const swiperTop = document.querySelector('.detailSwiper');
-
                 window.scrollTo({
                     top: swiperTop.offsetTop - 100,
-                    behavior: 'smooth'
                 });
             }
         }
     });
-
 
     //내부 스크롤 중에는 스크롤 막기
     document.querySelectorAll('.img-sec').forEach((el) => {
