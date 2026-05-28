@@ -139,7 +139,7 @@ main.container.sub2, main.container.sub2 > .inner {
   position: relative; 
   overflow: visible; 
 }
-.detailSwiper .swiper-wrapper, .detailSwiper .swiper-slide {height: 100%;}
+.detailSwiper .swiper-slide {height: auto; overflow: visible;}
 .detailSwiper .detail-slide {display: flex;}
 .detailSwiper .detail-slide > div {width: calc((100% - 20px) / 2); height: 100%;}
 .detailSwiper .detail-slide .img-sec {
