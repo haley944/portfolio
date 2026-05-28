@@ -207,19 +207,16 @@
     <script src="./custom.js"></script>
     <script>
     // swiper 슬라이드
+    const isMobile = window.innerWidth <= 1300;
     const swiper = new Swiper('.detailSwiper', {
         direction: 'vertical',
-        loop: true,
+        loop: !isMobile,
         slidesPerView: 1,
 
-        allowTouchMove: false,
-        simulateTouch: false,
+        allowTouchMove: !isMobile,
+        simulateTouch: !isMobile,
 
-        touchStartPreventDefault: false,
-        preventClicks: false,
-        preventClicksPropagation: false,
-
-        mousewheel: window.innerWidth > 1300 ? {
+        mousewheel: !isMobile ? {
             releaseOnEdges: true,
         } : false,
 
