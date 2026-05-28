@@ -212,13 +212,9 @@
         direction: 'vertical',
         loop: !isMobile,
         slidesPerView: 1,
-
         allowTouchMove: !isMobile,
         simulateTouch: !isMobile,
-
-        mousewheel: !isMobile ? {
-            releaseOnEdges: true,
-        } : false,
+        mousewheel: false,
 
         pagination: {
             el: ".swiper-pagination",
