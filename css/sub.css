@@ -137,7 +137,7 @@ main.container.sub2, main.container.sub2 > .inner {
   max-width: 1400px;
   height: 750px;
   position: relative; 
-  overflow: hidden; 
+  overflow: visible; 
 }
 .detailSwiper .swiper-wrapper, .detailSwiper .swiper-slide {height: 100%;}
 .detailSwiper .detail-slide {display: flex;}
@@ -146,6 +146,7 @@ main.container.sub2, main.container.sub2 > .inner {
     margin-right: 20px; 
     overflow-y: auto; 
     -webkit-overflow-scrolling: touch;
+     touch-action: pan-y;
 }
 .detailSwiper .detail-slide .img-sec img {width: 100%; display: block;}
 .detail-slide .txt-sec {letter-spacing: -.2px; font-size: 17px; position: relative;}
