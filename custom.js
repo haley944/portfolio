@@ -42,22 +42,42 @@ function setLayoutByHeader() {
 
 // 스크롤 이벤트 리스너
 const homeSection = document.querySelector('#home');
-let topAnimationPlayed = false;
 
-/* 최초 진입 애니메이션 */
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if(entry.isIntersecting){
-      const animatedItems = entry.target.querySelectorAll('.slide-item');
+if (homeSection) {
+  let topAnimationPlayed = false;
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        const animatedItems = entry.target.querySelectorAll('.slide-item');
+        animatedItems.forEach(item => {
+          item.classList.add('slide-in-fwd-top');
+        });
+      }
+    });
+  }, {
+    threshold: 0.3
+  });
+
+  observer.observe(homeSection);
+
+  window.addEventListener('scroll', () => {
+    if(window.scrollY === 0 && !topAnimationPlayed){
+      const animatedItems = document.querySelectorAll('.slide-item');
       animatedItems.forEach(item => {
+        item.classList.remove('slide-in-fwd-top');
+        void item.offsetWidth;
         item.classList.add('slide-in-fwd-top');
       });
+
+      topAnimationPlayed = true;
+    }
+
+    if(window.scrollY > 50){
+      topAnimationPlayed = false;
     }
   });
-}, {
-  threshold: 0.3
-});
-observer.observe(homeSection);
+}
 
 /* 맨 위 도달 시 1회만 재실행 */
 window.addEventListener('scroll', () => {
