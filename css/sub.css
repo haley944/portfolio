@@ -146,7 +146,6 @@ main.container.sub2, main.container.sub2 > .inner {
     margin-right: 20px; 
     overflow-y: auto; 
     -webkit-overflow-scrolling: touch;
-     touch-action: pan-y;
 }
 .detailSwiper .detail-slide .img-sec img {width: 100%; display: block;}
 .detail-slide .txt-sec {letter-spacing: -.2px; font-size: 17px; position: relative;}
@@ -262,7 +261,7 @@ main.container.sub2, main.container.sub2 > .inner {
     /* sub02 */
     .detailSwiper{height: 1100px;}
     .detail-slide .color_box {margin: 1.5rem 0;}
-    .detail-slide .img-sec {height:450px; touch-action: pan-y; overscroll-behavior: contain;}
+    .detail-slide .img-sec {height:450px; overscroll-behavior: contain;}
     .detail-slide .txt-sec { border-top: 1px solid #dcdcdc; padding-top: 1rem;}
     .detail-slide .txt-sec h3 {font-size: 20px;}
     .detail-slide .txt-sec {font-size: 15px;}
