@@ -234,7 +234,6 @@ main.container.sub2, main.container.sub2 > .inner {
         margin-top: 3rem;
         order: 2;
         max-width: 860px;
-        overflow-y: visible;
     }
     .detail-slide .etc_box {
         position: static;
@@ -262,7 +261,7 @@ main.container.sub2, main.container.sub2 > .inner {
     /* sub02 */
     .detailSwiper{height: 1100px;}
     .detail-slide .color_box {margin: 1.5rem 0;}
-    .detail-slide .img-sec {height:450px; overscroll-behavior: auto;}
+    .detail-slide .img-sec {height:450px; overscroll-behavior: contain;}
     .detail-slide .txt-sec { border-top: 1px solid #dcdcdc; padding-top: 1rem;}
     .detail-slide .txt-sec h3 {font-size: 20px;}
     .detail-slide .txt-sec {font-size: 15px;}
