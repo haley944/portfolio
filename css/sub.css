@@ -146,6 +146,7 @@ main.container.sub2, main.container.sub2 > .inner {
     margin-right: 20px; 
     overflow-y: auto; 
     -webkit-overflow-scrolling: touch;
+    flex: 1;
 }
 .detailSwiper .detail-slide .img-sec img {width: 100%; display: block;}
 .detail-slide .txt-sec {letter-spacing: -.2px; font-size: 17px; position: relative;}
@@ -224,7 +225,7 @@ main.container.sub2, main.container.sub2 > .inner {
 
     /* sub02 */
     main.container.sub2, main.container.sub2 > .inner {height: auto; }
-    .detailSwiper {max-width: 100%; height: 100vh;}
+    .detailSwiper {max-width: 100%; min-height: 100dvh; height: auto;}
     .detailSwiper .detail-slide {flex-direction: column;}
     .detailSwiper.swiper .button--wrapper {top:70%}
     .detailSwiper .detail-slide > div {width: 100%; height: auto;}
