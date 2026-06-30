@@ -147,6 +147,7 @@ main.container.sub2, main.container.sub2 > .inner {
     overflow-y: auto; 
     -webkit-overflow-scrolling: touch;
     flex: 1;
+    min-height: 0;
 }
 .detailSwiper .detail-slide .img-sec img {width: 100%; display: block;}
 .detail-slide .txt-sec {letter-spacing: -.2px; font-size: 17px; position: relative;}
